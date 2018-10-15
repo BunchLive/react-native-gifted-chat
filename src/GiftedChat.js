@@ -248,6 +248,8 @@ class GiftedChat extends React.Component {
 
   onKeyboardWillShow(e) {
     this.setIsTypingDisabled(true);
+    /* If the keyboard is layout is managed else where */
+    if (this.props.ignoreKeyboardLayout) return
     this.setKeyboardHeight(e.endCoordinates ? e.endCoordinates.height : e.end.height);
     this.setBottomOffset(this.props.bottomOffset);
     const newMessagesContainerHeight = this.getMessagesContainerHeightWithKeyboard();
@@ -265,6 +267,8 @@ class GiftedChat extends React.Component {
 
   onKeyboardWillHide() {
     this.setIsTypingDisabled(true);
+    /* If the keyboard is layout is managed else where */
+    if (this.props.ignoreKeyboardLayout) return
     this.setKeyboardHeight(0);
     this.setBottomOffset(0);
     const newMessagesContainerHeight = this.getBasicMessagesContainerHeight();
