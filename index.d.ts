@@ -245,6 +245,8 @@ export interface GiftedChatProps<TMessage extends IMessage = IMessage> {
   minComposerHeight?: number;
   /* composer min Height */
   maxComposerHeight?: number;
+  /* suppresses the "avoid keyboard" functionality */
+  ignoreKeyboardLayout?: boolean;
 }
 
 export class GiftedChat extends React.Component<GiftedChatProps> {
