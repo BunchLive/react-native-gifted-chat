@@ -232,7 +232,7 @@ export interface GiftedChatProps<TMessage extends IMessage = IMessage> {
   /*Max message composer TextInput length */
   maxInputLength?: number;
   /* Custom parse patterns for react-native-parsed-text used to linkify message content (like URLs and phone numbers) */
-  parsePatterns?(): React.ReactNode;
+  parsePatterns?(linkStyle: any): any;
   /* Force getting keyboard height to fix some display issues */
   forceGetKeyboardHeight?: boolean;
   /* Force send button */
