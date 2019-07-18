@@ -149,10 +149,7 @@ export default class MessageContainer extends React.PureComponent {
 
   keyExtractor = (item) => `${item._id}`;
 
-  render() {
-    if (this.props.messages.length === 0) {
-      return <View style={styles.container} />;
-    }
+  render() {    
     return (
       <View style={this.props.alignTop ? styles.containerAlignTop : styles.container}>
         {this.state.showScrollBottom && this.props.scrollToBottom ? this.renderScrollToBottomWrapper() : null}
