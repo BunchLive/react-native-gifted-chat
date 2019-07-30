@@ -74,6 +74,7 @@ export default class Avatar extends React.Component {
             avatarStyle={StyleSheet.flatten([
               styles[this.props.position].image,
               this.props.imageStyle[this.props.position],
+              { height: 0 },
             ])}
           />
         </View>
